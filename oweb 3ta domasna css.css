@@ -1,0 +1,19 @@
+style type='text/css'>
+.zajak
+{
+    
+    position:absolute;
+    top: 0px;
+    right: 100px;
+    left : 200px;
+    z-index: 2;
+}
+.zelka
+{
+    position:absolute;
+    top: 0px;
+    right:100px;
+    left : 500px;
+    z-index: 2;
+}
+</style>

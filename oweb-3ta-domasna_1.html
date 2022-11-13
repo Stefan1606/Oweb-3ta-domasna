@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+<meta charset = "utf-8" >
+<style type='text/css'>
+.zajak
+{
+    
+    position:absolute;
+    top: 0px;
+    right: 100px;
+    left : 200px;
+    z-index: 2;
+}
+.zelka
+{
+    position:absolute;
+    top: 0px;
+    right:100px;
+    left : 500px;
+    z-index: 2;
+}
+</style>
+<script type="text/javascript">
+var cekzelka;
+var cekzajak;
+var timer=1;
+var broj=1;
+var pozicijazajak=1;
+var pozicijazelka=1;
+var b1=pozicijazajak;
+var b2=pozicijazelka;
+function mrdni()
+{
+    broj=Math.floor(Math.random() * 11);
+    if(broj==1 || broj==2)
+    {
+        document.querySelector("#i1").style.top= 100 + "px";
+        document.querySelector("#i2").style.top= 200 + "px";
+        pozicijazajak=pozicijazajak+3
+        pozicijazelka=pozicijazelka+1
+    }
+    if(broj==3 || broj==4)
+    {
+        document.querySelector("#i1").style.top= 400 + "px";
+        document.querySelector("#i2").style.top= 100 + "px";
+        pozicijazajak=pozicijazajak+4
+        pozicijazelka=pozicijazelka+3
+    }
+    if(broj==5 || broj==6)
+    {
+        document.querySelector("#i1").style.top= 300 + "px";
+        document.querySelector("#i2").style.top= 400 + "px";
+        pozicijazajak=pozicijazajak+2
+        pozicijazelka=pozicijazelka+4
+    }
+    if(broj==7 || broj==8)
+    {
+        document.querySelector("#i1").style.top= 100 + "px";
+        document.querySelector("#i2").style.top= 500 + "px";
+        pozicijazajak=pozicijazajak+3
+        pozicijazelka=pozicijazelka+5
+    }
+    if(broj==9 || broj==10)
+    {
+        document.querySelector("#i1").style.top= 200 + "px";
+        document.querySelector("#i2").style.top= 200 + "px";
+        pozicijazajak=pozicijazajak+2
+        pozicijazelka=pozicijazelka+2
+    }
+    if(pozicijazajak>70)
+    {
+        window.alert("zajakot pobbedi");
+    }
+    if(pozicijazelka>70)
+    {
+        window.alert("zelkata pobedi");
+    }
+    if(pozicijazajak==pozicijazelka)
+    {
+        window.alert("ouch")
+    }
+    timer=timer+1;
+}
+
+</script> 
+</head>
+<body>
+<h1 class="zajak">
+ <img 
+ src=https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Cartoons-PNG/Bugs_Bunny_Transparent_PNG_Clip_Art_Image.png?m=1507172104 
+ id='i1' 
+ style="position:absolute; left: 500; top: 100; width="100" height="200" >
+</h1>
+
+<h1 class="zelka"> 
+  <img 
+  src=https://www.pngitem.com/pimgs/m/16-168315_cecil-the-turtle-with-glasses-hd-png-download.png
+  id='i2' 
+ style="position:absolute; left: 500; top: 100; width="100" height="200" >
+</h1>
+<p></p>
+<input type=button onClick=mrdni() value='stisni' id='i3'>
+<p> </p>
+<a> pozicija na zajakot e </a>
+<a href = test.html><script type="text/javascript">document.write(b1); </script></a>
+<p> </p>
+<a> pozicija na zelkata e </a>
+<a href = test.html><script type="text/javascript">document.write(b2); </script></a>
+<p></p>
+<a href = test.html><script type="text/javascript">document.write(timer); </script> </a>
+<a> sec </a>
+
+</body>
+</html>
